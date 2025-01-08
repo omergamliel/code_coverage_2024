@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>Test_Triangle_classification.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">Test_Triangle_classification (Jan 8, 2025 10:26:01 PM)</a> &gt; <a href="../../index.html" class="el_group">code_coverage_3</a> &gt; <a href="../index.html" class="el_bundle">src/test/java</a> &gt; <a href="index.source.html" class="el_package">code_coverage_4.code_coverage_4</a> &gt; <span class="el_source">Test_Triangle_classification.java</span></div><h1>Test_Triangle_classification.java</h1><pre class="source lang-java linenums">package code_coverage_4.code_coverage_4;
+
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+<span class="fc" id="L6">public class Test_Triangle_classification {</span>
+
+    @Test
+    public void testTC1() {
+<span class="fc" id="L10">        String result = Triangle_classification.classifyTriangle(3, 4, 8);</span>
+<span class="fc" id="L11">        assertEquals(&quot;notTriangle&quot;, result);</span>
+<span class="fc" id="L12">    }</span>
+
+    @Test
+    public void testTC2() {
+<span class="fc" id="L16">        String result = Triangle_classification.classifyTriangle(1, 5, 2);</span>
+<span class="fc" id="L17">        assertEquals(&quot;notTriangle&quot;, result);</span>
+<span class="fc" id="L18">    }</span>
+
+    @Test
+    public void testTC3() {
+<span class="fc" id="L22">        String result = Triangle_classification.classifyTriangle(10, 3, 5);</span>
+<span class="fc" id="L23">        assertEquals(&quot;notTriangle&quot;, result);</span>
+<span class="fc" id="L24">    }</span>
+
+    @Test
+    public void testTC4() {
+<span class="fc" id="L28">        String result = Triangle_classification.classifyTriangle(1, 1, 1);</span>
+<span class="fc" id="L29">        assertEquals(&quot;equilateral&quot;, result);</span>
+<span class="fc" id="L30">    }</span>
+
+    @Test
+    public void testTC5() {
+<span class="fc" id="L34">        String result = Triangle_classification.classifyTriangle(5, 5, 7);</span>
+<span class="fc" id="L35">        assertEquals(&quot;isosceles&quot;, result);</span>
+<span class="fc" id="L36">    }</span>
+    
+    //מסלול שגוי לבדיקה
+    @Test
+    public void testTC6() {
+<span class="fc" id="L41">        String result = Triangle_classification.classifyTriangle(5, 5, 3);</span>
+<span class="fc" id="L42">        assertEquals(&quot;isosceles&quot;, result);</span>
+<span class="fc" id="L43">    }</span>
+
+    @Test
+    public void testTC7() {
+<span class="fc" id="L47">        String result = Triangle_classification.classifyTriangle(6, 4, 3);</span>
+<span class="fc" id="L48">        assertEquals(&quot;scalene&quot;, result);</span>
+<span class="fc" id="L49">    }</span>
+
+    @Test
+    public void testTC8() {
+<span class="fc" id="L53">        String result = Triangle_classification.classifyTriangle(6, 4, 4);</span>
+<span class="fc" id="L54">        assertEquals(&quot;isosceles&quot;, result);</span>
+<span class="fc" id="L55">    }</span>
+
+    @Test
+    public void testTC9() {
+<span class="fc" id="L59">        String result = Triangle_classification.classifyTriangle(5, 3, 5);</span>
+<span class="fc" id="L60">        assertEquals(&quot;isosceles&quot;, result);</span>
+<span class="fc" id="L61">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span>Test_Triangle_classification (Jan 8, 2025 10:26:01 PM)</div></body></html>

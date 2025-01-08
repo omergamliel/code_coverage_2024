@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>Triangle_classification.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">Test_Triangle_classification (Jan 8, 2025 10:26:01 PM)</a> &gt; <a href="../../index.html" class="el_group">code_coverage_3</a> &gt; <a href="../index.html" class="el_bundle">src/main/java</a> &gt; <a href="index.source.html" class="el_package">code_coverage_4.code_coverage_4</a> &gt; <span class="el_source">Triangle_classification.java</span></div><h1>Triangle_classification.java</h1><pre class="source lang-java linenums">package code_coverage_4.code_coverage_4;
+
+<span class="nc" id="L3">public class Triangle_classification {</span>
+
+	// סוגי המשולשים
+<span class="fc" id="L6">    enum TriangleTypes {</span>
+<span class="fc" id="L7">        equilateral, // משולש שווה צלעות</span>
+<span class="fc" id="L8">        isosceles,  // משולש שווה שוקיים</span>
+<span class="fc" id="L9">        scalene,    // משולש שונה צלעות</span>
+<span class="fc" id="L10">        notTriangle,// לא משולש</span>
+<span class="fc" id="L11">        ERROR       // שגיאה</span>
+    }
+    
+    public static String classifyTriangle(int a, int b, int c) {
+<span class="fc" id="L15">        TriangleTypes triangle = TriangleTypes.notTriangle;</span>
+
+<span class="fc bfc" id="L17" title="All 2 branches covered.">        if (c&lt;a+b) {</span>
+        	
+<span class="fc bfc" id="L19" title="All 2 branches covered.">            if (b&lt;a+c) {</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">                if (a&lt;b+c) {</span>
+<span class="fc bfc" id="L21" title="All 2 branches covered.">                    if (a==b) {</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">                        if (b==c) {</span>
+<span class="fc" id="L23">                            triangle = TriangleTypes.equilateral;</span>
+<span class="fc" id="L24">                            return triangle.toString();</span>
+                        }
+                    }
+<span class="fc bfc" id="L27" title="All 2 branches covered.">                    if (a==b) {</span>
+<span class="fc" id="L28">                        triangle = TriangleTypes.isosceles;</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">                    } else if (b==c) {</span>
+<span class="fc" id="L30">                        triangle = TriangleTypes.isosceles;</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">                    } else if (a==c) {</span>
+<span class="fc" id="L32">                        triangle = TriangleTypes.isosceles;</span>
+                    } else {
+<span class="fc" id="L34">                        triangle = TriangleTypes.scalene;</span>
+                    }
+                }
+            }
+        }
+
+<span class="fc" id="L40">        return triangle.toString();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span>Test_Triangle_classification (Jan 8, 2025 10:26:01 PM)</div></body></html>
